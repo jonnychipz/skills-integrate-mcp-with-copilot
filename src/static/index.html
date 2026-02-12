@@ -10,7 +10,35 @@
     <header>
       <h1>Mergington High School</h1>
       <h2>Extracurricular Activities</h2>
+      <div id="user-menu">
+        <button id="user-icon" title="Teacher Login">👤</button>
+        <div id="user-dropdown" class="hidden">
+          <span id="logged-in-user" class="hidden"></span>
+          <button id="login-btn">Login</button>
+          <button id="logout-btn" class="hidden">Logout</button>
+        </div>
+      </div>
     </header>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal hidden">
+      <div class="modal-content">
+        <span id="close-modal" class="close-btn">&times;</span>
+        <h3>Teacher Login</h3>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required placeholder="Enter username" />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" required placeholder="Enter password" />
+          </div>
+          <div id="login-error" class="error hidden"></div>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
 
     <main>
       <section id="activities-container">
